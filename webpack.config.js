@@ -19,7 +19,13 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
-      }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+            "sass-loader", // 1. Turns sass into css
+        ],
+    },
     ]
   },
   plugins: [new HtmlWebpackPlugin({template:path.resolve(__dirname, 'public', 'index.html')})],
